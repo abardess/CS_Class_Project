@@ -39,4 +39,3 @@ class Set {
         return this.set.length()
     }
 }
-
