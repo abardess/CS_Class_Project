@@ -1,4 +1,5 @@
 class Set {
+    set;
     constructor(set) {
         this.set = [];
     }
