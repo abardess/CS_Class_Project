@@ -1,5 +1,5 @@
-// import { Set } from './set.js';
-import { Set } from './set_sonja.js';
+import { Set } from './set.js';
+// import { Set } from './set_sonja.js';
 
 const mySet = new Set([]);
 let myValues = [1, 1, 2, 5, 6, 6, 7, 9, 9];
