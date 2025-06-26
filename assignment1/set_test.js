@@ -1,18 +1,18 @@
-import { Set } from './set.js'; // the class file must have " export class Set {...} "
+import { Set } from './set.js';
 
 const mySet = new Set([]);
 let myValues = [1, 1, 2, 5, 6, 6, 7, 9, 9];
 
 
-
 // test values() and size()
 console.log("\nBEFORE additions...");
 console.log("mySet.values() --> " + mySet.values());
-console.log("mySet.size() --> " + mySet.size());
+console.log("mySet.size() --> " + mySet.size() + "\n");
 
 // test add()
 for (let i = 0; i < myValues.length ; i++){
     mySet.add(myValues[i]);
+    console.log("mySet.add(" + myValues[i] + ") --> " + mySet.values());
 }
 
 console.log("\nAFTER additions...");
