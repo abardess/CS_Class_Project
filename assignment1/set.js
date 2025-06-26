@@ -1,7 +1,8 @@
 class Set {
-    set;
+    set = [];
     constructor(set) {
-        this.set = [];
+        this.set = set;
+        this.set.clean();
     }
     add(value) {
         if(this.has(value)) {
@@ -38,5 +39,14 @@ class Set {
     }
     size() {
         return this.set.length()
+    }
+
+    clean() {
+        for(let i = 0; i < this.set.length - 1; i++) {
+            for(let j = 0; j < this.set.length - 1; j++) {
+                if((this.set[i] == this.set[j]) && (i != j)) {
+                    this.set.splice(j,1);
+                }
+        }
     }
 }
