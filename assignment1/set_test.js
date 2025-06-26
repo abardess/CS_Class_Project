@@ -13,6 +13,7 @@ console.log("mySet.size() --> " + mySet.size());
 // test add()
 for (let i = 0; i < myValues.length ; i++){
     mySet.add(myValues[i]);
+    console.log(mySet);
 }
 
 console.log("\nAFTER additions...");

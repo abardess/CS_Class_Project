@@ -5,7 +5,6 @@ export class Set {
     }
     add(value) {
         if(this.has(value)) {
-            console.log("Value already exists in set.");
             return;
         }
         this.set.push(value);
@@ -24,10 +23,10 @@ export class Set {
         for(let i = 0; i < this.set.length - 1; i++) {
             if(value == this.set[i]) {
                 this.set.splice(i,1);
-                return;
+                return true;
             }
         }
-        console.log("No such value.");
+        return false;
 
     }
     clear() {
