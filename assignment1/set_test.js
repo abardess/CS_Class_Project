@@ -1,4 +1,5 @@
-import { Set } from './set.js';
+// import { Set } from './set.js';
+import { Set } from './set_sonja.js';
 
 const mySet = new Set([]);
 let myValues = [1, 1, 2, 5, 6, 6, 7, 9, 9];
@@ -11,6 +12,7 @@ console.log("mySet.size() --> " + mySet.size() + "\n");
 
 // test add()
 for (let i = 0; i < myValues.length ; i++){
+    
     mySet.add(myValues[i]);
     console.log("mySet.add(" + myValues[i] + ") --> " + mySet.values());
 }

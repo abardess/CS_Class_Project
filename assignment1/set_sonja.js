@@ -1,17 +1,9 @@
 export class Set {
     
-    set = [];
+    set;
 
     constructor() {
-    }
-
-    //Insert the value into the Set, if it does not already exist. 
-    add(value) {
-        if(!this.set.contains(value)){
-            
-        }
-
-        this.set.push(value);
+        this.set = [];
     }
 
     //Return true or false if the Set contains the given value.
@@ -28,6 +20,12 @@ export class Set {
         return false; // searched the whole array, with no match
     }
 
+    //Insert the value into the Set, if it does not already exist. 
+    add(value) {
+        if(!this.has(value)){
+            this.set.push(value);
+        }
+    }
 
     //Delete the given value from the set. 
     //Return true if the value was deleted, or false if the value did not exist in the set.  
