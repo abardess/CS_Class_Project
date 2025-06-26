@@ -22,6 +22,7 @@ console.log("mySet.values() --> " + mySet.values());
 console.log("mySet.size() --> " + mySet.size());
 console.log("\n------------------------------- \n");
 
+//test has();
 console.log("Testing has() method...");
 console.log("mySet: " + mySet.values()  + "\n");
 for (let i = 0; i < 11 ; i++){

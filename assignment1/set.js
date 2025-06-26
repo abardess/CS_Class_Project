@@ -2,7 +2,6 @@ export class Set {
     set = [];
     constructor(set) {
         this.set = this.set;
-
         for(let i = 0; i < this.set.length; i++) {
             for(let j = 0; j < this.set.length; j++) {
                 if((this.set[i] == this.set[j]) && (i != j)) {
@@ -10,23 +9,21 @@ export class Set {
                 }
             }
         }
-
     }
-
+ 
     has(value) {
-        for(let i = 0; i < this.set.length ; i++) {
+        for(let i = 0; i < this.set.length; i++) {
             if(value == this.set[i]) {
                 return true;
             }
         }
         return false;
     }
-
+ 
     add(value) {
         if(!this.has(value)) {
             this.set.push(value);
-            console.log
-        }        
+        }
     }
 
     delete(value) {
@@ -50,8 +47,8 @@ export class Set {
     }
 
     clean() {
-        for(let i = 0; i < this.set.length - 1; i++) {
-            for(let j = 0; j < this.set.length - 1; j++) {
+        for(let i = 0; i < this.set.length; i++) {
+            for(let j = 0; j < this.set.length; j++) {
                 if((this.set[i] == this.set[j]) && (i != j)) {
                     this.set.splice(j,1);
                 }
