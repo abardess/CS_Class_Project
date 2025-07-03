@@ -1,0 +1,6 @@
+I think the biggest difference when using an object as compared to a set would be that sorting the set would no longer be an issue -- as an object cannot be sorted or unsorted.
+
+As far as each function goes. has() would be reduced from O(n) to O(1) because no longer will a loop be needed to scan through the whole list; it can directly check if a value exists in the object yet. This means that add() also becomes O(1), as it uses the has() function to check, then adds a number if the number is not already there. clear() might actually increase from O(1) to O(n) -- I'm not sure if you can "rest" an object to not have any key-valued pairs. Delete(), values(), and size() would all stay the same, I think.
+
+Setting up the object feels like it might be more complex in the writing process. I haven't worked a lot with them, so I have some uncertainties in what is possible, but overall it sould be better because most of its functions are faster than their array equivalents. An array-based set is better if you care about sorting, or easily transfering the whole set to other places -- moving and copying a list is much easier than copying values from an object into a list, for example.If speed matters only, object-based is better, but a set seems overall more versatile because it is a 'simpler' data structure.
+
