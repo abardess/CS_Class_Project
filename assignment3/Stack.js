@@ -1,5 +1,4 @@
 // make sure to include push, pop, peek, isEmpty
-// make sure ot include enqueue, dequeue, peek, isEmpty
 // Implement the Stack and the Queue data structures using a LinkedList
 // as their backing data structure.
 // Remember: You can't use any arrays to store data! 
@@ -8,6 +7,31 @@
 // If you get stuck here, remember how stacks and queues function, 
 // and what LIFO and FIFO means for the data that they store.
 
+import { LinkedList } from './LinkedList.js';
+import { Node } from './Node.js';
+
 export class Stack {
+
+    stack = new LinkedList();
+    
+    constructor(value) {
+        this.stack = new LinkedList(new Node(value));
+    }
+
+    push(value){
+        this.stack.insertHead(new Node(value));
+    }
+
+    pop(){
+        this.stack.deleteHead();
+    }
+
+    peek(){
+        return this.stack.headValue();
+    }
+
+    isEmpty(){
+        return (this.stack.length() == 0);
+    }
 
 }
