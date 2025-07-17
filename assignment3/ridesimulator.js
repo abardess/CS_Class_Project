@@ -18,7 +18,12 @@ function run() {
   park.boardRide();  // Alice, Bob, Charlie get on, Charlie's in front
   park.unloadRide(); // Charlie, Bob, Alice get off
 
+ console.log("Remaining in line:", park.getLine()); // Should be just Diana
+
   park.arrive("Eli");
+
+  console.log("Remaining in line:", park.getLine()); // Should Diana and Eli
+
   park.boardRide();  // Diana, Eli get on
   park.unloadRide(); // Eli, Diana get off
 

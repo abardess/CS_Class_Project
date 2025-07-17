@@ -33,4 +33,8 @@ export class Queue {
     isEmpty(){
         return (this.queue.length() == 0);
     }
+
+    getValues(){
+        return this.queue.getValues();
+    }
 }

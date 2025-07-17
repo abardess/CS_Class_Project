@@ -88,4 +88,14 @@ export class LinkedList {
     }
     return counter;
   }
+
+  getValues() {
+    let arrayOfValues = [];
+    let currentNode = this.start; 
+    while (currentNode != null) {
+      arrayOfValues.push(currentNode.data);
+      currentNode = currentNode.next; 
+    }
+    return arrayOfValues;
+  }
 }

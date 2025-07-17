@@ -1,4 +1,4 @@
-import { Queue } from './Queue.js'; // assuming the class above is in Queue.js
+import { Queue } from './Queue.js';
 
 // Test the Queue
 const q = new Queue("first");

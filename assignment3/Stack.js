@@ -32,4 +32,8 @@ export class Stack {
         return (this.stack.length() == 0);
     }
 
+    getvalues(){
+        this.stack.getValues();
+    }
+
 }
