@@ -60,16 +60,23 @@ export class LinkedList {
     this.end = current;
   }
 
-  headValue() {
+  getHead() {
+    
     if (this.start) {
       return this.start.data;
     } else {
       return null;
     }
+    
+    // return this.start ? this.start.data : null;
   }
 
-  tailValue() {
-    return this.end.data;
+  getTail() {
+    if (this.end) {
+      return this.end.data;
+    } else {
+      return null;
+    }
   }
 
   length() {

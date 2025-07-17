@@ -12,8 +12,6 @@ import { Node } from './Node.js';
 
 export class Stack {
 
-    stack = new LinkedList();
-    
     constructor(value) {
         this.stack = new LinkedList(new Node(value));
     }
@@ -27,7 +25,7 @@ export class Stack {
     }
 
     peek(){
-        return this.stack.headValue();
+        return this.stack.getHead();
     }
 
     isEmpty(){

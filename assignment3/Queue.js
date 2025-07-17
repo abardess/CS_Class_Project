@@ -7,6 +7,30 @@
 // If you get stuck here, remember how stacks and queues function, 
 // and what LIFO and FIFO means for the data that they store.
 
-export class Queue {
+import { LinkedList } from './LinkedList.js';
+import { Node } from './Node.js';
 
+export class Queue {
+    
+    constructor(value) {
+        this.queue = new LinkedList(new Node(value));
+    }
+
+    enqueue(value){
+        this.queue.insertTail(new Node(value));
+    }
+
+    dequeue(){
+        let headValue = this.queue.getHead();
+        this.queue.deleteHead();
+        return headValue;
+    }
+
+    peek(){
+        return this.queue.getHead();
+    }
+
+    isEmpty(){
+        return (this.queue.length() == 0);
+    }
 }
