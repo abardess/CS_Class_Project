@@ -1,4 +1,4 @@
-/*
+
 import { LinkedList } from './LinkedList.js';
 import { Node } from './Node.js';
 
@@ -7,38 +7,38 @@ list.insertTail(new Node(9));
 list.insertTail(new Node(17));
 list.insertTail(new Node(4)); 
 list.insertTail(new Node(5)); 
-
 list.insertHead(new Node(1)); 
 
-let currentNode = list.start; 
-while (currentNode != null) {
-  console.log(currentNode.data);
-  currentNode = currentNode.next; 
-}
+console.log(list.getValues());
 
 //------------------------------
 
 list.deleteHead();
 console.log("\n\n");
 console.log("after deleteHead():");
-currentNode = list.start; 
-while (currentNode != null) {
-  console.log(currentNode.data);
-  currentNode = currentNode.next; 
-}
+console.log(list.getValues());
 
 //------------------------------
 
 list.deleteTail();
 console.log("\n\n");
 console.log("after deleteTail():");
-currentNode = list.start; 
-while (currentNode != null) {
-  console.log(currentNode.data);
-  currentNode = currentNode.next; 
-}
-*/
+console.log(list.getValues());
 
+//------------------------------
+
+console.log("\n\n");
+console.log("Initialize with no parameter passed:");
+
+let list2 = new LinkedList();
+list2.insertTail(new Node(6));
+list2.insertTail(new Node(12));
+list2.insertTail(new Node(15)); 
+list2.insertTail(new Node(3)); 
+list2.insertHead(new Node(7)); 
+console.log(list2.getValues());
+
+/*
 import { LinkedList } from './LinkedList.js';
 import { Node } from './Node.js';
 
@@ -88,3 +88,4 @@ function testLinkedList() {
 }
 
 testLinkedList();
+*/
