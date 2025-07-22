@@ -19,7 +19,6 @@ export class LinkedList {
     this.end = node; 
   }
 
-
   // as written, does not remove the old head node from computer memory
   deleteHead() {
 
