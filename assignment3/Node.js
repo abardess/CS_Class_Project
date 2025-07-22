@@ -1,3 +1,4 @@
+
 export class Node {
   data; 
   next; // next node

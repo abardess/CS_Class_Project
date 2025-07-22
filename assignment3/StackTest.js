@@ -1,4 +1,6 @@
 import { Stack } from './Stack.js';
+import { LinkedList } from './LinkedList.js';
+import { Node } from './Node.js';
 
 function assertEqual(actual, expected, message) {
   if (actual !== expected) {
@@ -8,20 +10,24 @@ function assertEqual(actual, expected, message) {
   }
 }
 
+
 console.log("=== Stack Tests ===");
 
-// Initialize a stack with value 10
-const s = new Stack(10);
+//initialize a linked list with one node that has a value of 10
+let list = new LinkedList(new Node(10)); 
+
+// Initialize a stack from the linkedlist
+const s = new Stack(list);
 assertEqual(s.peek(), 10, "Initial value is on top");
 
 // Push more values
-s.push(20);
-s.push(30);
+s.push(new Node(20));
+s.push(new Node(30));
 assertEqual(s.peek(), 30, "Top after pushing 30");
 
 // Pop a value
 s.pop();
-assertEqual(s.peek(), 20, "Top after popping 30");
+assertEqual(s.peek(), 20, "Top after popping 30 is");
 
 // Pop again
 s.pop();
