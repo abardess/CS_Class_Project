@@ -1,4 +1,6 @@
-// Instrucitons: Write and extend the following class (excuse the lack of code highlighting in Canvas!):
+import { Node } from "./Node.js";
+import { Queue } from "./Queue.js";
+import { Stack } from "./Stack.js";
 
 export class ThemeParkRide {
   constructor(rideCapacity) {
@@ -7,22 +9,35 @@ export class ThemeParkRide {
     this.capacity = rideCapacity;       // max people per ride
   }
 
+  // Add visitor to the line
   arrive(visitorName) {
-    // Add visitor to the line
+    let x = new Node(visitorName);
+    this.line.enqueue(x);
   }
-
+// Move up to this.capacity people from line to ride (stack)
   boardRide() {
-    // Move up to this.capacity people from line to ride (stack)
+    for(let i = 0; i < rideCapacity; i++) {
+      this.ride.push(this.line.dequeue);
+    }
+  
   }
+    // Pop all people from the ride stack, in reverse order.
+    // The people who got on last sit in the front of the ride, and so they'll get off first. 
 
   unloadRide() {
-    // Pop all people from the ride stack, in reverse order.
-    // The people who got on last sit in the front of the ride,
-    // and so they'll get off first. 
+    while(!this.ride.isEmpty()) {
+      this.ride.pop()
+    }
   }
 
+  // Return array or string of people still waiting.
   getLine() {
-    // Return array or string of people still waiting.
-    // How can you turn your list into an array? 
+    let waitingList = [];
+    let guest = this.line.start;
+    while(!guest == null) {
+      waitingList.push(guest);
+      guest = guest.next;
+    }
+    return(waitingList)
   }
 }

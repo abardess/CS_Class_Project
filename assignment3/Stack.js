@@ -1,6 +1,3 @@
-import{ Node } from './Node.js';
-import{ LinkedList } from './LinkedList.js';
-
 export class Stack {
 
     constructor(linkedList) {

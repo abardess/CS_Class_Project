@@ -1,4 +1,3 @@
-import { Node } from './Node.js';
 
 export class LinkedList {
   start = null; // nodes
@@ -15,8 +14,8 @@ export class LinkedList {
   }
   
   insertTail(node) {
-    this.end.next = node; 
-    this.end = node; 
+    this.end.next = node; //old end points to new end node
+    this.end = node; //new node is now the new end
   }
 
   // as written, does not remove the old head node from computer memory

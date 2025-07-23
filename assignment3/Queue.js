@@ -1,8 +1,4 @@
-import{ Node } from './Node.js';
-import{ LinkedList } from './LinkedList.js';
-
 export class Queue {
-
     constructor(linkedList) {
         this.queue = linkedList;
     }
