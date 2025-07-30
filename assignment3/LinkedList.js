@@ -9,12 +9,22 @@ export class LinkedList {
   }
   
   insertHead(node) {
-    node.next = this.start; // New node points to the current head
+    if(this.start != null) {
+      node.next = this.start; // New node points to the current head
+    }
+    else {
+      this.end = node;
+    }
     this.start = node;      // Update the head to be the new node
   }
   
   insertTail(node) {
-    this.end.next = node; //old end points to new end node
+    if(this.end != null) {
+      this.end.next = node; //old end points to new end node
+    }
+    else {
+      this.start = node;
+    }
     this.end = node; //new node is now the new end
   }
 
@@ -22,7 +32,7 @@ export class LinkedList {
   deleteHead() {
 
     // if list is empty
-    if (!this.start) {
+    if(!this.start) {
       return; 
     }
     
@@ -30,15 +40,13 @@ export class LinkedList {
     
     // If next element in the list is null,
     // update 'end' to null as well
-    if (!this.start) {
+    if(!this.start) {
       this.end = null;
     }
   }
 
-
   // as written, does not remove the old tail node from computer memory 
   deleteTail() {
-
     if (!this.start) return; // List is empty
 
     if (this.start === this.end) {

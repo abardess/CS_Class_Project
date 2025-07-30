@@ -22,14 +22,12 @@ export class Stack {
             return(end);
         }
         
-        while (currentNode.next != null) {
-            if(currentNode.next.next == null) {
-                currentNode.next = null;
-                this.stack.end = currentNode;
-                return(end);
-            }
+        while (currentNode.next != this.stack.end) {
             currentNode = currentNode.next;
         }
+        currentNode.next = null;
+        this.stack.end = currentNode;
+        return(end);
     }
 
     peek() {

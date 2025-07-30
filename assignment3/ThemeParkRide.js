@@ -1,22 +1,23 @@
 import { Node } from "./Node.js";
+import { LinkedList } from "./LinkedList.js";
 import { Queue } from "./Queue.js";
 import { Stack } from "./Stack.js";
 
 export class ThemeParkRide {
   constructor(rideCapacity) {
-    this.line = new Queue();            // waiting visitors
-    this.ride = new Stack();            // people on the ride
+    this.line = new Queue(new LinkedList());        // waiting visitors
+    this.ride = new Stack(new LinkedList());       // people on the ride
     this.capacity = rideCapacity;       // max people per ride
   }
 
   // Add visitor to the line
   arrive(visitorName) {
-    let x = new Node(visitorName);
-    this.line.enqueue(x);
+    this.line.enqueue(new Node(visitorName));
+    console.log(this.line.end.data + " has arrived!")
   }
 // Move up to this.capacity people from line to ride (stack)
   boardRide() {
-    for(let i = 0; i < rideCapacity; i++) {
+    for(let i = 0; i < this.capacity; i++) {
       this.ride.push(this.line.dequeue);
     }
   
@@ -34,7 +35,9 @@ export class ThemeParkRide {
   getLine() {
     let waitingList = [];
     let guest = this.line.start;
-    while(!guest == null) {
+    console.log(guest);
+    while(guest != this.line.end) {
+      console.log(guest.data + "is in line");
       waitingList.push(guest);
       guest = guest.next;
     }

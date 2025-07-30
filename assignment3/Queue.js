@@ -1,3 +1,4 @@
+
 export class Queue {
     constructor(linkedList) {
         this.queue = linkedList;
@@ -14,10 +15,13 @@ export class Queue {
     }
 
     peek() {
-        return(this.queue.start);
+        if(this.isEmpty()) {
+            return null
+        }
+        return(this.queue.start.data);
     }
 
     isEmpty() {
-        return(linkedList.start == null);
+        return(this.queue.start == null);
     }
 }
